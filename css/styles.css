@@ -38,6 +38,7 @@ h2 {
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
     color: #fff;
+    transition: transform 200ms, color 150ms;
 }
 
 p {
@@ -129,6 +130,10 @@ section:nth-of-type(even) .landing__container {
     text-align: right; 
 }
 
+section:nth-of-type(even) .landing__container > h2 {
+    transform-origin: right;
+}
+
 /* Background Circles */
 /* Note that background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
@@ -206,6 +211,12 @@ section.your-active-class .landing__container::before {
 section.your-active-class .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+.section--active > .landing__container > h2 {
+    color: #cc1;
+    transform-origin: left;
+    transform: scale(1.08);
 }
 
 /* Section Active Styles Keyframe Animations */
