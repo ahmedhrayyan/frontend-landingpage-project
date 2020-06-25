@@ -57,7 +57,7 @@ for (const section of sections) {
   const li = document.createElement("li");
   const a = document.createElement("a");
   a.className = "menu__link";
-  a.textContent = section.querySelector("h2").textContent;
+  a.textContent = section.dataset.nav
   a.href = "#" + section.id;
   li.appendChild(a);
   fragment.appendChild(li);
